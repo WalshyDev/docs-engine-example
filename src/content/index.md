@@ -6,20 +6,32 @@ type: overview
 
 <ContentColumn>
 
-# Docs engine example site
+# ArcaneExploration
 
-This is an example docs site built using the [docs engine](https://github.com/adamschwartz/cloudflare-docs-engine).
-
-Check out [another page](/another-page).
+Some cool stuff that we will write here.
 
 --------------------------------
 
-## Running locally
+## API
 
-```sh
-~/ $ git clone git@github.com:adamschwartz/docs-engine-example.git
-~/ $ cd docs-engine-example
-~/docs-engine-example $ npm install
-~/docs-engine-example $ npm run bootstrap && npm run develop
+(Hey, we can use code blocks too!)
+```java
+public class ExampleMob extends Mob {
+    
+    public TestZombie() {
+        // Set the ID to "EXAMPLE_MOB", have a red name of "Example". The Mob is a Zombie and it has 60 health.
+        super("EXAMPLE_MOB", ChatColor.RED + "Example", EntityType.ZOMBIE, 60);
+    }
+
+    @Override
+    public void onSpawn(@Nonnull LivingEntity self, @Nonnull BlockPosition position) {
+        // Set the zombie to glow
+        self.setGlowing(true);
+        // Set that the zombie cannot pick up items
+        self.setCanPickupItems(false);
+        // Change the movement speed to 2
+        self.getAttribute(Attribute.GENERIC_MOVEMENT_SPEED).setBaseValue(2);
+    }
+}
 ```
 </ContentColumn>
